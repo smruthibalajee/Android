@@ -1,6 +1,7 @@
 package com.example.wang55459.synthesizer;
 
 import android.media.MediaPlayer;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +13,8 @@ public class SynthesizerActivity extends AppCompatActivity{ //implements View.On
             SynthesizerActivity.class.getName();
     private Button button1;
     private Button button2;
+    private MediaPlayer mpE;
+    private MediaPlayer mpF;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
