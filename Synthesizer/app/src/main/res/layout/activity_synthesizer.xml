@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="HELLOHELLOHELLOHELLOHELLO!" />
 
     <Button
         android:layout_width="wrap_content"
@@ -22,16 +22,16 @@
         android:id="@+id/button1"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
-        android:onClick="onClick (SynthesizerActivity)" />
+        android:onClick="onButtonClick1 (SynthesizerActivity)" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button2"
         android:id="@+id/button2"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="44dp"
+        android:onClick="onButtonClick2 (SynthesizerActivity)"
         android:layout_below="@+id/button1"
-        android:layout_alignParentStart="true"
-        android:onClick="onClick (SynthesizerActivity)" />
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
