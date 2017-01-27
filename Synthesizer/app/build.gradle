@@ -4,7 +4,7 @@ android {
     compileSdkVersion 24
     buildToolsVersion "25.0.0"
     defaultConfig {
-        applicationId "com.example.wang55459.synthesizer"
+        applicationId "org.pltw.example.synthesizer"
         minSdkVersion 22
         targetSdkVersion 24
         versionCode 1

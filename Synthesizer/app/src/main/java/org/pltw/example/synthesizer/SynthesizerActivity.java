@@ -1,7 +1,6 @@
-package com.example.wang55459.synthesizer;
+package org.pltw.example.synthesizer;
 
 import android.media.MediaPlayer;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,22 +8,12 @@ import android.view.View;
 import android.widget.Button;
 
 public class SynthesizerActivity extends AppCompatActivity {
-    private static final String TAG =
-            SynthesizerActivity.class.getName();
+    private static final String TAG = SynthesizerActivity.class.getName();
     private Button button1;
     private Button button2;
     private MediaPlayer mpE;
     private MediaPlayer mpF;
 
-    public void onButtonClick1(View v) {
-        Log.e(TAG, "Button 1 Clicked");
-        mpE.start();
-    }
-
-    public void onButtonClick2(View v) {
-        Log.e(TAG, "Button 2 Clicked");
-        mpF.start();
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +24,16 @@ public class SynthesizerActivity extends AppCompatActivity {
         mpF = MediaPlayer.create(this, R.raw.scalef);
     }
 
+    public void onButton1Click(View v) {
+        mpE.seekTo(0);
+        Log.i(TAG, "Button 1 Clicked");
+        mpE.start();
+    }
+
+    public void onButton2Click(View v) {
+        mpF.seekTo(0);
+        Log.i(TAG, "Button 2 Clicked");
+        mpF.start();
+    }
 
 }
-
-
-
-

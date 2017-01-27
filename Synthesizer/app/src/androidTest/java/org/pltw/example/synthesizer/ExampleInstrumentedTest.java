@@ -1,4 +1,4 @@
-package com.example.wang55459.synthesizer;
+package org.pltw.example.synthesizer;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.wang55459.synthesizer", appContext.getPackageName());
+        assertEquals("org.pltw.example.synthesizer", appContext.getPackageName());
     }
 }

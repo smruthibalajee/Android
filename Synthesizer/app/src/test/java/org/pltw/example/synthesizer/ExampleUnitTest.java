@@ -1,4 +1,4 @@
-package com.example.wang55459.synthesizer;
+package org.pltw.example.synthesizer;
 
 import org.junit.Test;
 
