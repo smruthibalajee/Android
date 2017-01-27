@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="org.pltw.example.synthesizer.SynthesizerActivity">
+    tools:context="org.pltw.example.synthesizer.SynthesizerActivity"
+    android:id="@+id/Iterations">
 
     <Button
         android:layout_width="wrap_content"
@@ -32,6 +33,31 @@
         android:layout_below="@+id/button2"
         android:layout_alignEnd="@+id/button2"
         android:id="@+id/challenge1"
+        android:onClick="onButtonCHL1Click"/>
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/challenge1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp"
+        android:id="@+id/note" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/note"
+        android:layout_toEndOf="@+id/note"
+        android:layout_marginStart="11dp"
+        android:id="@+id/iterations" />
+
+    <Button
+        android:text="@string/challenge2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/note"
+        android:layout_alignEnd="@+id/iterations"
+        android:id="@+id/challenge2"
         android:onClick="onButtonCHL1Click"/>
 </RelativeLayout>
 

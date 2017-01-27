@@ -3,4 +3,5 @@
     <string name="button1">First Button</string>
     <string name="button2">Second Button</string>
     <string name="challenge1">Challenge One</string>
+    <string name="challenge2">Challenge Two</string>
 </resources>

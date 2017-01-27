@@ -1,18 +1,24 @@
 package org.pltw.example.synthesizer;
 
 import android.media.MediaPlayer;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.NumberPicker;
 
 public class SynthesizerActivity extends AppCompatActivity {
     private final int WHOLE_NOTE = 1000;
+    private final int HALF_NOTE = 500;
     private static final String TAG = SynthesizerActivity.class.getName();
     private Button button1;
     private Button button2;
     private Button challenge1;
+    private Button challenge2;
+    private NumberPicker note;
+    private NumberPicker iterations;
 
     private MediaPlayer mpA;
     private MediaPlayer mpB;
@@ -23,6 +29,8 @@ public class SynthesizerActivity extends AppCompatActivity {
     private MediaPlayer mpF;
     private MediaPlayer mpFs;
 
+    MediaPlayer[] noteArray = {mpA, mpB, mpC, mpCs, mpD, mpE, mpF, mpFs};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +38,7 @@ public class SynthesizerActivity extends AppCompatActivity {
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
         challenge1 = (Button) findViewById(R.id.challenge1);
+        challenge2 = (Button) findViewById(R.id.challenge2);
         mpA = MediaPlayer.create(this, R.raw.scalea);
         mpB = MediaPlayer.create(this, R.raw.scaleb);
         mpC = MediaPlayer.create(this, R.raw.scalec);
@@ -38,6 +47,10 @@ public class SynthesizerActivity extends AppCompatActivity {
         mpE = MediaPlayer.create(this, R.raw.scalee);
         mpF = MediaPlayer.create(this, R.raw.scalef);
         mpFs = MediaPlayer.create(this, R.raw.scalefs);
+        note.setMinValue(0);
+        note.setMaxValue(8);
+        iterations.setMinValue(0);
+        iterations.setMaxValue(8);
     }
 
     private void delayPlaying(int delay) throws InterruptedException {
@@ -78,6 +91,19 @@ public class SynthesizerActivity extends AppCompatActivity {
             delayPlaying(WHOLE_NOTE);
 
         } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void onButtonCHL2Click(View v) {
+        try {
+            for(int i = 0; i < iterations.getValue(); i++) {
+                noteArray[note.getValue()].seekTo(0);
+                noteArray[note.getValue()].start();
+                delayPlaying(WHOLE_NOTE);
+            }
+        }
+        catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
