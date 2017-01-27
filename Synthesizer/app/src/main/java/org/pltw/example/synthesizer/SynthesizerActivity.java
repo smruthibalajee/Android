@@ -28,7 +28,6 @@ public class SynthesizerActivity extends AppCompatActivity {
     private MediaPlayer mpE;
     private MediaPlayer mpF;
     private MediaPlayer mpFs;
-
     MediaPlayer[] noteArray = {mpA, mpB, mpC, mpCs, mpD, mpE, mpF, mpFs};
 
     @Override
@@ -39,6 +38,8 @@ public class SynthesizerActivity extends AppCompatActivity {
         button2 = (Button) findViewById(R.id.button2);
         challenge1 = (Button) findViewById(R.id.challenge1);
         challenge2 = (Button) findViewById(R.id.challenge2);
+        note = (NumberPicker) findViewById(R.id.note);
+        iterations = (NumberPicker) findViewById(R.id.iterations);
         mpA = MediaPlayer.create(this, R.raw.scalea);
         mpB = MediaPlayer.create(this, R.raw.scaleb);
         mpC = MediaPlayer.create(this, R.raw.scalec);
@@ -47,10 +48,11 @@ public class SynthesizerActivity extends AppCompatActivity {
         mpE = MediaPlayer.create(this, R.raw.scalee);
         mpF = MediaPlayer.create(this, R.raw.scalef);
         mpFs = MediaPlayer.create(this, R.raw.scalefs);
-        note.setMinValue(0);
-        note.setMaxValue(8);
-        iterations.setMinValue(0);
-        iterations.setMaxValue(8);
+        note.setMinValue(1);
+        note.setMaxValue(7);
+        iterations.setMinValue(1);
+        iterations.setMaxValue(7);
+
     }
 
     private void delayPlaying(int delay) throws InterruptedException {
@@ -97,7 +99,7 @@ public class SynthesizerActivity extends AppCompatActivity {
 
     public void onButtonCHL2Click(View v) {
         try {
-            for(int i = 0; i < iterations.getValue(); i++) {
+            for (int i = 0; i < iterations.getValue(); i++) {
                 noteArray[note.getValue()].seekTo(0);
                 noteArray[note.getValue()].start();
                 delayPlaying(WHOLE_NOTE);
