@@ -48,9 +48,9 @@ public class SynthesizerActivity extends AppCompatActivity {
         mpE = MediaPlayer.create(this, R.raw.scalee);
         mpF = MediaPlayer.create(this, R.raw.scalef);
         mpFs = MediaPlayer.create(this, R.raw.scalefs);
-        note.setMinValue(1);
+        note.setMinValue(0);
         note.setMaxValue(7);
-        iterations.setMinValue(1);
+        iterations.setMinValue(0);
         iterations.setMaxValue(7);
 
     }
@@ -98,19 +98,60 @@ public class SynthesizerActivity extends AppCompatActivity {
     }
 
     public void onButtonCHL2Click(View v) {
-        try {
+       for(int i = 0; i < iterations.getValue(); i++) {
+           MediaPlayer[] noteArray = {mpA, mpB, mpC, mpCs, mpD, mpE, mpF, mpFs};
+           if(note.getValue() == 0) {
+               //mpA.seekTo(0);
+               mpA.start();
+           }
+           if(note.getValue() == 1) {
+               mpB.seekTo(0);
+               mpB.start();
+           }
+           if(note.getValue() == 2) {
+               mpC.seekTo(0);
+               mpC.start();
+           }
+           if(note.getValue() == 3) {
+               mpCs.seekTo(0);
+               mpCs.start();
+           }
+           if(note.getValue() == 4) {
+               mpD.seekTo(0);
+               mpD.start();
+           }
+           if(note.getValue() == 5) {
+               mpE.seekTo(0);
+               mpE.start();
+           }
+           if(note.getValue() == 6) {
+               mpF.seekTo(0);
+               mpF.start();
+           }
+           if(note.getValue() == 7) {
+               mpFs.seekTo(0);
+               mpFs.start();
+           }
+
+
+       }
+       }
+        /* try { //Challenge 3, 6
             for (int i = 0; i < iterations.getValue(); i++) {
                 noteArray[note.getValue()].seekTo(0);
                 noteArray[note.getValue()].start();
+                //mpE.seekTo(0);
+                //mpE.start();
                 delayPlaying(WHOLE_NOTE);
             }
         }
         catch (InterruptedException e) {
             e.printStackTrace();
         }
-    }
+        */
 
     }
+
 
 
 

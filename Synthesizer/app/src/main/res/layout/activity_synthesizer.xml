@@ -58,6 +58,6 @@
         android:layout_below="@+id/note"
         android:layout_alignEnd="@+id/iterations"
         android:id="@+id/challenge2"
-        android:onClick="onButtonCHL2Click (SynthesizerActivity)"/>
+        android:onClick="onButtonCHL2Click"/>
 </RelativeLayout>
 
