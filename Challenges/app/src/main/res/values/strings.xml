@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Challenges</string>
+    <string name="button1">Challenge 0</string>
+    <string name="button2">Challenge 1</string>
+    <string name="button3">Challenge 2</string>
+    <string name="button5">Challenge 5</string>
+</resources>
