@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ExtensionActivity</string>
+        <string name="app_name">Challenges</string>
+        <string name="button1">Play/Pause</string>
+        <string name="button2">Next Track</string>
+        <string name="button3">Previous Track</string>
 </resources>

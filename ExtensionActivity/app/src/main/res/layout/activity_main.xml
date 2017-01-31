@@ -10,8 +10,28 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="org.pltw.example.extensionactivity.MainActivity">
 
-    <TextView
+    <Button
+        android:text="Next Track"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button2" />
+
+    <Button
+        android:text="Prev. Track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Play/Pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
