@@ -59,5 +59,13 @@
         android:layout_alignEnd="@+id/iterations"
         android:id="@+id/challenge2"
         android:onClick="onButtonCHL2Click"/>
+
+    <TextView
+        android:text="@string/challenge1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/challenge2"
+        android:layout_alignEnd="@+id/challenge2"
+        android:id="@+id/textView" />
 </RelativeLayout>
 

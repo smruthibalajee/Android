@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.NumberPicker;
 
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button button3;
     private Button button5;
     private Button button6;
+    private Button button;
     private MediaPlayer mpE;
     private MediaPlayer mpF;
     private MediaPlayer mpFs;
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int x;
     private int y;
     private int i;
+    private CheckBox checkBox;
     MediaPlayer aSongs[];
     private MediaPlayer mp;
 
@@ -50,8 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button1 = (Button) findViewById(R.id.button1);
-        button1.setOnClickListener(MainActivity.this);
+      //  button1 = (Button) findViewById(R.id.button1);
+      //  button1.setOnClickListener(MainActivity.this);
 
         button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(MainActivity.this);
@@ -65,6 +68,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button6 = (Button) findViewById(R.id.button6);
         button6.setOnClickListener(MainActivity.this);
 
+        button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(MainActivity.this);
 
 
 
@@ -118,17 +123,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.button1) {
-            try {
-                mpE.start();
-                delayPlaying(WHOLE_NOTE);
-                mpF.start();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
 
-
-        }
 
         if (v.getId() == R.id.button2) {
             try {
@@ -228,7 +223,90 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
-        if (v.getId() == R.id.button5) {
+        if (v.getId() == R.id.button5 && checkBox.isChecked() ) { //This code applies to challenge 9 and 5, but notes were not added; used if conditional
+            try {
+                mpA.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpA.seekTo(0);
+                mpA.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpHighE.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpHighE.seekTo(0);
+                mpHighE.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpHighFs.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpHighFs.seekTo(0);
+                mpHighFs.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpHighE.seekTo(0);
+                mpHighE.start();
+                delayPlaying(WHOLE_NOTE);
+                ;
+                mpD.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpD.seekTo(0);
+                mpD.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpCs.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpCs.seekTo(0);
+                mpCs.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpB.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpB.seekTo(0);
+                mpB.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpA.start();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        else {
+                try {
+                    mpA.start();
+                    delayPlaying(WHOLE_NOTE / 2);
+                    mpA.seekTo(0);
+                    mpA.start();
+                    delayPlaying(WHOLE_NOTE / 2);
+                    mpHighE.start();
+                    delayPlaying(WHOLE_NOTE / 2);
+                    mpHighE.seekTo(0);
+                    mpHighE.start();
+                    delayPlaying(WHOLE_NOTE / 2);
+                    mpHighFs.start();
+                    delayPlaying(WHOLE_NOTE / 2);
+                    mpHighFs.seekTo(0);
+                    mpHighFs.start();
+                    delayPlaying(WHOLE_NOTE / 2);
+                    mpHighE.seekTo(0);
+                    mpHighE.start();
+                    delayPlaying(WHOLE_NOTE);;
+                    mpD.start();
+                    delayPlaying(WHOLE_NOTE / 2);
+                    mpD.seekTo(0);
+                    mpD.start();
+                    delayPlaying(WHOLE_NOTE / 2);
+                    mpCs.start();
+                    delayPlaying(WHOLE_NOTE / 2);
+                    mpCs.seekTo(0);
+                    mpCs.start();
+                    delayPlaying(WHOLE_NOTE / 2);
+                    mpB.start();
+                    delayPlaying(WHOLE_NOTE / 2);
+                    mpB.seekTo(0);
+                    mpB.start();
+                    delayPlaying(WHOLE_NOTE / 2);
+                    mpA.start();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
+
+        if (v.getId() == R.id.button6) {
             try {
                 mpA.start();
                 delayPlaying(WHOLE_NOTE / 2);
@@ -264,12 +342,60 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mpB.start();
                 delayPlaying(WHOLE_NOTE / 2);
                 mpA.start();
+                delayPlaying(WHOLE_NOTE);
+
+
+                mpHighE.seekTo(0);
+                mpHighE.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpHighE.seekTo(0);
+                mpHighE.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpD.seekTo(0);
+                mpD.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpD.seekTo(0);
+                mpD.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpCs.seekTo(0);
+                mpCs.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpCs.seekTo(0);
+                mpCs.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpB.seekTo(0);
+                mpB.start();
+                delayPlaying(WHOLE_NOTE);
+
+
+                mpHighE.seekTo(0);
+                mpHighE.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpHighE.seekTo(0);
+                mpHighE.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpD.seekTo(0);
+                mpD.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpD.seekTo(0);
+                mpD.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpCs.seekTo(0);
+                mpCs.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpCs.seekTo(0);
+                mpCs.start();
+                delayPlaying(WHOLE_NOTE / 2);
+                mpB.seekTo(0);
+                mpB.start();
+                delayPlaying(WHOLE_NOTE);
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
 
-        else if (v.getId() == R.id.button6) {
+        if (v.getId() == R.id.button) {
             try {
                 mpA.start();
                 delayPlaying(WHOLE_NOTE / 2);
@@ -359,6 +485,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
+
 
 }
 

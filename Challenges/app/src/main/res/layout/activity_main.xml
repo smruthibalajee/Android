@@ -10,34 +10,71 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.wang55459.challenges.MainActivity">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Challenges 1/3"
+        android:id="@+id/button2"
+        android:textSize="13dp"
+        android:layout_alignStart="@+id/button3" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numberPicker2"
+        android:layout_marginEnd="37dp"
+        android:layout_alignBottom="@+id/button6"
+        android:layout_toStartOf="@+id/numberPicker3">
+    </NumberPicker>
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numberPicker3"
+        android:layout_marginEnd="24dp"
+        android:layout_alignBaseline="@+id/numberPicker2"
+        android:layout_alignBottom="@+id/numberPicker2"
+        android:layout_alignParentEnd="true">
+    </NumberPicker>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button1"
-        android:id="@+id/button1"
+        android:text="Challenges 9/10"
+        android:id="@+id/button6"
         android:textSize="13dp"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/textView1"
         android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button2"
-        android:id="@+id/button2"
+        android:text="Challenges 5-8"
+        android:id="@+id/button5"
         android:textSize="13dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/button6"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button3"
+        android:text="Challenges 2/4"
         android:id="@+id/button3"
         android:textSize="13dp"
 
-        android:layout_below="@+id/button1"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/button2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="# of Times"
+        android:textSize="20dp"
+        android:id="@+id/textView2"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -46,54 +83,25 @@
         android:textSize="20dp"
         android:id="@+id/textView1"
         android:layout_alignBottom="@+id/button3"
-        android:layout_alignEnd="@+id/button1" />
+        android:layout_toStartOf="@+id/textView2"
+        android:layout_marginEnd="14dp" />
+
+    <CheckBox
+        android:text="CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:layout_alignBottom="@+id/button5"
+        android:layout_toStartOf="@+id/numberPicker3"
+        android:checked="false" />
 
     <Button
+        android:text="Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button5"
-        android:id="@+id/button5"
-        android:textSize="13dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="103dp" />
-
-
-    <NumberPicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/numberPicker3"
-        android:layout_alignBaseline="@+id/numberPicker2"
-        android:layout_alignBottom="@+id/numberPicker2"
-        android:layout_alignStart="@+id/button2">
-    </NumberPicker>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="# of Times"
-        android:textSize="20dp"
-        android:id="@+id/textView2"
-        android:layout_alignBottom="@+id/button3"
-        android:layout_alignParentEnd="true" />
-
-    <NumberPicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/numberPicker2"
-        android:layout_above="@+id/button5"
-        android:layout_toStartOf="@+id/button3"
-        android:layout_marginBottom="90dp">
-    </NumberPicker>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Challenge 9"
-        android:id="@+id/button6"
-        android:textSize="13dp"
-        android:layout_alignTop="@+id/button5"
-        android:layout_alignStart="@+id/numberPicker3" />
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/checkBox"
+        android:id="@+id/button" />
 
 
 </RelativeLayout>
