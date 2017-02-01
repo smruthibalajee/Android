@@ -1,11 +1,14 @@
 package org.pltw.example.extensionactivity;
 
 import android.media.MediaPlayer;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -33,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private MediaPlayer mpHighFs;
     private MediaPlayer mpHighG;
 
-
+    private int[] randList = {1,2,3,4,5};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +78,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } catch (InterruptedException e) {
             Log.e("Synthesizer", "Audio Playback Interrupted");
         }
+    }
+
+    private static int[] shuffleArray(int[] array)
+    {
+        int index, temp;
+        Random random = new Random();
+        for (int i = array.length - 1; i > 0; i--)
+        {
+            index = random.nextInt(i + 1);
+            temp = array[index];
+            array[index] = array[i];
+            array[i] = temp;
+        }
+
+        return array;
     }
 
     private void Song1(){ //Scales a --> g
@@ -135,20 +153,118 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private static void Song3(){
-
+    private void Song3(){
+        try{
+            mpB.start();
+            delayPlaying(HALF_NOTE);
+            mpB.seekTo(0);
+            mpB.start();
+            delayPlaying(HALF_NOTE);
+            mpB.seekTo(0);
+            mpC.start();
+            delayPlaying(HALF_NOTE);
+            mpC.seekTo(0);
+            mpD.start();
+            delayPlaying(HALF_NOTE);
+            mpD.seekTo(0);
+            mpD.start();
+            delayPlaying(HALF_NOTE);
+            mpD.seekTo(0);
+            mpC.start();
+            delayPlaying(HALF_NOTE);
+            mpC.seekTo(0);
+            mpB.start();
+            delayPlaying(HALF_NOTE);
+            mpB.seekTo(0);
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
-    private static void Song4(){
-
+    private void Song4(){
+        try{
+            mpD.start();
+            delayPlaying(HALF_NOTE);
+            mpD.seekTo(0);
+            mpB.start();
+            delayPlaying(HALF_NOTE);
+            mpB.seekTo(0);
+            mpG.start();
+            delayPlaying(HALF_NOTE);
+            mpG.seekTo(0);
+            mpB.start();
+            delayPlaying(HALF_NOTE);
+            mpB.seekTo(0);
+            mpD.start();
+            delayPlaying(HALF_NOTE);
+            mpD.seekTo(0);
+            mpG.start();
+            delayPlaying(HALF_NOTE);
+            mpG.seekTo(0);
+            mpB.start();
+            delayPlaying(HALF_NOTE);
+            mpB.seekTo(0);
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
-    private static void Song5(){
-
+    private void Song5(){
+        try{
+            mpD.start();
+            delayPlaying(HALF_NOTE);
+            mpD.seekTo(0);
+            mpD.start();
+            delayPlaying(HALF_NOTE);
+            mpD.seekTo(0);
+            mpD.start();
+            delayPlaying(HALF_NOTE);
+            mpD.seekTo(0);
+            mpG.start();
+            delayPlaying(HALF_NOTE);
+            mpG.seekTo(0);
+            mpD.start();
+            delayPlaying(HALF_NOTE);
+            mpD.seekTo(0);
+            mpC.start();
+            delayPlaying(HALF_NOTE);
+            mpC.seekTo(0);
+            mpB.start();
+            delayPlaying(HALF_NOTE);
+            mpB.seekTo(0);
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
+
+
 
     @Override
-    public void onClick(View view) {
+    public void onClick(View v) {
+        if(v.getId() == R.id.button1) {
+            randList = shuffleArray(randList);
+            for(int i = 0; i < 5; i++) {
+                if(randList[i] == 1) {
+                Song1();
+                }
+                if(randList[i] == 2) {
+                    Song2();
+                }
+                if(randList[i] == 3) {
+                    Song3();
+                }
+                if(randList[i] == 4) {
+                    Song4();
+                }
+                if(randList[i] == 5) {
+                    Song5();
+                }
 
+            }
+        }
+        }
     }
-}
+
