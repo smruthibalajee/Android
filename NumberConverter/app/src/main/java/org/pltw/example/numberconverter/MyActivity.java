@@ -2,7 +2,7 @@ package org.pltw.example.numberconverter;
 
 import java.util.Stack;
 import android.app.Activity;
-import android.app.AlertDialog.Builder;
+
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;

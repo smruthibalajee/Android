@@ -248,7 +248,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             randList = shuffleArray(randList);
             for(int i = 0; i < 5; i++) {
                 if(randList[i] == 1) {
-                Song1();
+                    Song1();
                 }
                 if(randList[i] == 2) {
                     Song2();
@@ -265,6 +265,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             }
         }
-        }
     }
-
+}
