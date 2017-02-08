@@ -1,6 +1,0 @@
-<resources>
-        <string name="app_name">Extension Activity</string>
-        <string name="button1">Play/Pause</string>
-        <string name="button2">Next Track</string>
-        <string name="button3">Previous Track</string>
-</resources>
